@@ -1,0 +1,16 @@
+*{
+    margin:0; padding:0; color: chartreuse;
+}
+.bg{
+    background-image: url("../ASSETS/model-1209985_19201.png");
+    height:100vh;
+    width:100%;
+}
+ul{
+    display: flex;
+    height:5vh;
+    width: 50vw;
+    justify-content: space-between;
+    list-style-type:none;
+    position: relative; bottom:90vh; left:30vw;
+}
