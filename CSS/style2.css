@@ -1,24 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root {
+    --secondary-color:rgb(224, 255, 101);
+    --primary-color:#000;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
 *{
     padding: 0;
     margin: 0;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(.8, -0.02, .6, 1.03);
+   }
+   body {
+    background-color:var(--primary-color);
    }
 section {
-    color: rgb(224, 255, 101);
+    color: var(--secondary-color);
     height: 100vh;
-    background-image: url("../ASSETS/model-1209985_19201.png");
+    background-image: url("../ASSETS/model-1209985_19201.jpg");
     width: 100%;
+    background-position: right 30%;
+    background-size: 1620px 1005px;
+    background-repeat: no-repeat;
+    background-color: var(--primary-color);
+  transition-duration: 1.5s;
+transition-timing-function: cubic-bezier(.8, -0.02, .6, 1.03);
+transform:scale(1.5);
+      
 }
 a{
     text-decoration: none;
-    color: rgb(224, 255, 101);
+    color: var(--secondary-color);
+    transition-duration:0.5s !important;
+    transition-timing-function: ease;
 }
 .options {
     display: flex;
     justify-content: space-between;
     width: 50vw;
-    color: rgb(224, 255, 101);
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -68,8 +90,8 @@ a{
     width: 8vw;
     border-width:2vh;
     border-style: solid;
-    border-color: rgb(224, 255, 101);
-    background-color: rgb(224, 255, 101);
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
     text-align: center;
     border-radius: .2vw;
     color: black;
@@ -87,7 +109,7 @@ a{
     align-items: center;
     position: relative;
     left: 90vw;
-    top:36vh;
+    top:30vh;
 }
 .cpt {
     height: 5vW;
@@ -114,5 +136,35 @@ a{
     color: #ffff;
 }
 .options a:hover{
-    color: rgb(224, 255, 101);
+    color: var(--secondary-color);
 } 
+
+
+.loader {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1.5s;
+    transition-timing-function:cubic-bezier(.8, -0.02, .6, 1.03);
+    position:absolute;
+    z-index: 2;
+    /* transform: translateY(500px); */
+overflow: hidden;
+}
+.loader h1 {
+color:var(--primary-color);
+font-size: 100px;
+font-family: 'Encode Sans', sans-serif;
+font-weight: 100;
+transition-duration: 1s;
+}
+.loader p {
+    color: rgb(49, 49, 49);
+    font-size: 50px;
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 10;
+}
